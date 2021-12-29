@@ -1,16 +1,16 @@
 (function(){
   let imgSources = [];
   const imgSourcesMin = 1;
-  const imgSourcesMax = 12;
+  const imgSourcesMax = 511;
   for (i = imgSourcesMin; i < imgSourcesMax + 1; i++) {
     imgSources.push({
       type: 'image',
-      url:  `/scannedImgViewer/dict/images/TaioanoeSiongiongGilui_Page_${('00' + i).slice(-3)}.jpg`
+      url:  `/dict/images/TaioanoeSiongiongGilui_Page_${('00' + i).slice(-3)}.jpg`
     })
   }
   const viewer = OpenSeadragon({
     id: 'viewer-block',
-    prefixUrl: '/scannedImgViewer/assets/images/openseadragon/',
+    prefixUrl: '/assets/images/openseadragon/',
     tileSources: imgSources,
     sequenceMode: true,
 
