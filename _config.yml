@@ -28,7 +28,6 @@ url: "https://miau715.github.io"
 header_pages:
         - intro.markdown
         - info.markdown
-        - viewer.markdown
 
 # Server Config options
 livereload: true

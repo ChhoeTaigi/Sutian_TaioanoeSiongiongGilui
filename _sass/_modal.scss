@@ -1,0 +1,40 @@
+body.modal-opened {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-wrapper {
+  display: none;
+  background: rgba(102, 102, 102, 0.5);;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  z-index: 50;
+  &.opened {
+    display: flex;
+  }
+}
+
+.modal {
+  position: fixed;
+  &__close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: $color--fade-dark-main;
+  }
+  &__iframe {
+    background: #fff;
+    z-index: 100;
+    min-height: 500px;
+    max-height: 80vh;
+    box-shadow: 0px 2px 5px rgba(119, 119, 119, 0.2);
+    width: clamp(280px, 90vw, 600px);
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+  }
+}

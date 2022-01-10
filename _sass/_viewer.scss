@@ -1,7 +1,6 @@
 .viewer {
   &__header, &__footer {
     background: $color--fade-main;
-    padding: 5px 15px;
     color: $color--light-main;
     ul {
       @extend %plain-list;
@@ -26,8 +25,11 @@
     }
   }
   &__header {
+    position: relative;
+    height: 36px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     h1 {
       font-size: 18px;
       margin: 0 auto 0 0;
@@ -36,6 +38,52 @@
       color: $color--fade-light-main;
       text-decoration: none;
     }
+    ul {
+      margin-right: 5px;
+    }
+  }
+  &__header-menu {
+    margin-right: 10px;
+    .menu-toggle {
+      margin: 0;
+      background: transparent;
+      border: none;
+      height: 36px;
+      width: 36px;
+      padding: 5px;
+      border-radius: 0;
+      transition: background .1s ease-in;
+    }
+    .menu-toggle:hover, &.opened .menu-toggle {
+      background: $color--fade-dark-main;
+    }
+    nav {
+      display: none;
+      background: $color--fade-dark-main;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+    }
+    &.opened nav {
+      display: block;
+    }
+    ul {
+      width: 200px;
+      flex-direction: column;
+      align-items: stretch;
+      margin: 0;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 10px;
+      flex-grow: 1;
+      &:hover {
+        background: $color--gray-main;
+      }
+    }
   }
   &__content {
     position: relative;
@@ -43,6 +91,7 @@
     background-color: $color--light-main;
   }
   &__footer {
+    padding: 5px 15px;
     display: flex;
     justify-content: center;
     align-items: center;

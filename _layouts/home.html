@@ -5,6 +5,25 @@
 
   <body class="viewer">
     <header class="viewer__header">
+      <div class="viewer__header-menu">        
+        <button id="nav-button" class="menu-toggle">
+          <img src="{{ site.baseurl }}/assets/images/icons/menu-w.svg" alt="menu" />
+        </button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#info" class="modal-link">
+                Siāu-kài
+              </a>
+            </li>
+            <li>
+              <a href="#licenses" class="modal-link">
+                Siū-khoân
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>    
       <h1><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
       <ul>
         <li>
@@ -45,6 +64,31 @@
         <button id="goto-page__go">Go</button>
       </div>
     </footer>
+
+    <div class="modal-wrapper" id="modal--info">
+      <div class="modal">
+        <button class="modal__close">
+          <img src="{{ site.baseurl }}/assets/images/icons/cross.svg" alt="close modal" />
+        </button>
+        <div class="modal__iframe">
+          <iframe src="{{ site.baseurl }}/info.html" title="siāu-kài" width="100%" frameborder="0" allowfullscreen sandbox>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-wrapper" id="modal--licenses">
+      <div class="modal">
+        <button class="modal__close">
+          <img src="{{ site.baseurl }}/assets/images/icons/cross.svg" alt="close modal" />
+        </button>
+        <div class="modal__iframe">
+          <iframe src="{{ site.baseurl }}/licenses.html" title="siāu-kài" width="100%" frameborder="0" allowfullscreen sandbox>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
   </body>
   <script src="{{ "/assets/javascripts/openseadragon.min.js" | relative_url }}"></script>
   <script src="{{ "/assets/javascripts/viewer.js" | relative_url }}"></script>

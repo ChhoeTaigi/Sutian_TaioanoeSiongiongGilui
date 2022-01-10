@@ -1,0 +1,28 @@
+@import "variables.scss";
+
+@import "lib/normalize";
+@import "lib/sr-only";
+@import url(https://tauhu.tw/tauhu-oo.css);
+
+@import "base.scss";
+
+body {
+  padding: 20px;
+}
+
+header {
+  border-bottom: $color--gray-light-main 1px solid;
+  h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    text-align: center;
+    color: $color--fade-dark-main;
+  }
+}
+
+main {
+  h1, h2, h3, h4, h5, h6 {
+    color: $color--fade-main;
+  }
+  color: #555;
+}
